@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+<div class="text-center fs-2">
+    <i class="fa-solid fa-magnifying-glass-dollar"></i>
+    Latest<b class="txt-mycolor">jobs</b></div>
+<div class="row"
+>
+    <div class="col-sm-6 mx-auto py-2">
+        {% for i in jdata %}
+        <!--start card-->
+        <div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4 text-center">
+      <img src="/{{i.job_picture}}" class="img-fluid rounded-start max-height:50px" style="max-height:55px;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text"><a href="{{i.job_link}}" style="text-decoration:none;" target="_blank">{{i.job_title}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+        <!--end card-->
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

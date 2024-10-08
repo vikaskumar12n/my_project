@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>News Adda</title>
+    <link href="static/{images/logo.png}"/>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/all.css' %}" rel="stylesheet">
+    <style>
+        :root
+        {
+        --bgcolor:linear-gradient(60deg,#64B5F6,#536DFE);
+        --txtcolor:#b52598;
+        --bgcolor1:#a8a6ae;
+        --txtcolor1:#e8e8e8;
+
+        }
+        .bg-mycolor
+        {
+        background:var(--bgcolor)!important;
+        }
+        .txt-mycolor1
+        {
+        color:var(--txtcolor1);
+        }
+        .bg-mycolor1
+        {
+        background:var(--bgcolor1) !important;
+        }
+        .txt-mycolor
+        {
+        color:var(--txtcolor) !important;
+        }
+#menu
+        {
+        background:transparent !important;
+        }
+        #menu ul li a
+        {
+        color:white;
+        }
+.footer1
+        {
+        min-height:300px;
+        }
+.footer2
+        {
+        min-height:50px;
+        margin-top:.1%;
+        }
+        .t1
+        {
+        font-size:13px;
+        }
+        .social a
+        {
+       color:blue;
+       font-size:33px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row t1 bg-info text-center border">
+        <div class="col-lg-3 col-sm-12 col-md-6 py-2"><i class="fa-solid fa-envelope"></i>
+            <a href="mailto: support@techpile.in" class="txt-mycolor"
+               style="text-decoration:none">vvikaskumar393@gmail.com</a></div>
+        <div class="col-lg-3 col-sm-12 col-md-6 py-2"><i class="fa-solid fa-phone"></i>
+            <a href="tel:8528118190" class="txt-mycolor" style="text-decoration:none">+91 8528118190</a></div>
+        <div class="col-lg-3 col-sm-12 col-md-6 py-2">Welcome to <b class="txt-mycolor">News Adda</b></div>
+        <div class="col-lg-3 col-sm-12 col-md-6 py-2">
+            <a class="badge bg-mycolor  rounded-pill p-1 txt-mycolor  fs-6" style="text-decoration:none ; " href="/user/jobs/">Jobs</a>
+
+        </div>
+    </div>
+    <div class="row t2">
+        <div class="col-sm-10 mx-auto ">
+            <div class="row">
+                <div class="col-sm-4 fs-2">
+                    News<b class="txt-mycolor">&nbsp;Adda
+                    <i class="fa-regular fa-newspaper"></i></b>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 text-end social">
+                    <a href="https://www.facebook.com//"> <i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.twitter.com//"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.instagram.com//"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.whatsapp.com//"><i class="fa-brands fa-square-whatsapp"></i></a>
+                    <a href="https://www.youtube.com//"><i class="fa-brands fa-square-youtube"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row t3 bg-mycolor ps-4">
+        <div class="col-sm-8 mx-auto">
+            <!--start menu-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/user/index/">
+                                    <i class="fa-solid fa-house-user"></i>
+                                    Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/news/">
+                                    <i class="fa-regular fa-newspaper"></i>
+                                    News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/about/">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/videos/">
+                                    <i class="fa-solid fa-photo-film"></i>
+                                    Videos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/jobs/">
+                                    <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                                    Jobs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/contact/">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                    Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/">
+                                    <i class="fa-solid fa-key"></i>
+                                    Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--end menu-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12" style="min-height:300px;">
+            {% block childpage %}
+
+            {% endblock %}
+        </div>
+    </div>
+    <div class="row footer1 bg-dark">
+
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+        <div class="container my-5">
+
+            <!-- Footer -->
+            <footer class="bg-dark text-center text-white">
+                <!-- Grid container -->
+                <div class="container p-4">
+                    <!-- Section: Social media -->
+                    <section class="mb-4">
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com//"
+                           role="button"
+                        ><i class="fab fa-facebook-f"></i
+                        ></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com//" role="button"
+                        ><i class="fab fa-twitter"></i
+                        ></a>
+
+                        <!-- Google -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.techpile.in/" role="button"
+                        ><i class="fab fa-google"></i
+                        ></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com//"
+                           role="button"
+                        ><i class="fab fa-instagram"></i
+                        ></a>
+
+                    </section>
+                    <!-- end Section: Social media -->
+
+                    <!-- Section: Form -->
+                    <section class="">
+                        <form action="">
+                            <!--Grid row-->
+                            <div class="row d-flex justify-content-center">
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                            </div>
+                            <!--Grid row-->
+                        </form>
+                    </section>
+                    <!-- Section: Form -->
+
+                    <!-- Section: Text -->
+                    <section class="mb-4">
+                        <p>
+                            Explore diverse topics including politics, international <relation></relation>, business, technology,
+                            sports, and more. Our dedicated team of journalists and correspondents work tirelessly to
+                            deliver accurate and unbiased reporting.
+                        </p>
+                    </section>
+                    <!-- Section: Text -->
+
+                    <!-- Section: Links -->
+                    <section class="">
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                    </section>
+                    <!-- Section: Links -->
+                </div>
+                <!-- Grid container -->
+
+            </footer>
+            <!-- Footer -->
+
+        </div>
+        <!-- End of .container -->
+    </div>
+
+    <div class="row footer2 bg-dark">
+        <!-- Copyright -->
+         <div class="col-sm-6 fs-5 py-2">
+            <a href="/user/myprofile/" target="blank" style="text-decoration:none; color:white;">Design & Developed by: Vikas Bind </a>
+        </div>
+        <div class="col-sm-6 fs-5 py-2 text-center">
+            <a href="vvikaskumar393@gmail.com" target="BLANK" style="text-decoration:none; color:white;">@vvikaskumar393@gmail.com</a>
+        </div>
+
+        <!-- Copyright -->
+    </div>
+</div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'base.html '%}
+{% load static %}
+{% block childpage %}
+
+
+<h2 class="text-center mt-3">My <b class="text-mycolor">Information</b> <i class="fa-regular fa-user"></i></h2>
+
+
+<div class="row mt-4 ">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 mb-5 p-3 max-auto" style="border:2px solid #b52598; box-shadow: 0px 0px 10px #b52598 ; border-radius: 20px;;">
+
+        <div class="card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img src="{% static 'images/mu.png'%}" class="img-fluid rounded-start" alt="..." style="height:100%; width:400px; border-radius:50%;">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body p-5" >
+
+                    <b class="card-text "><i class="fa-solid fa-user btn bg-mycolor "  >   </i> Vikas Bind<br/>
+                        <br/>
+
+
+                  <b class="card-text"><i class="fa-solid fa-envelope btn bg-mycolor">    </i> vvikaskumar393@gmail.com<br/>
+  <br/>
+                  <b class="card-text"><i class="fa-solid fa-phone btn bg-mycolor">    </i> +918528118190<br/>
+  <br/>
+                  <b class="card-text"><i class="fa-solid fa-lock btn bg-mycolor" >    </i>***********<br/>
+
+  <br/>
+                  <b class="card-text"><i class="fa-solid fa-user btn bg-mycolor"  >   </i>    vill+post. patar dist. ghazipur state.uttar pradesh</b><br/>
+
+                  <br/>
+
+                </b>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+</div>
+{% endblock %}

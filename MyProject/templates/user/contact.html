@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block childpage %}
+<style>
+  .form-control
+  {
+ height:50px;
+ margin-button:.8%;
+  }
+</style>
+<div class="=row bg-light">
+  <div class="col-sm-12">
+<center><h2><i class="fa-solid fa-phone"></i>&nbsp;Contact<b class="txt-mycolor">&nbsp;Us</b></h2></center>
+    <center><p>You may contact us by contact number or fill this form any time you need professional support or have any question.</p></center>
+  </div>
+</div>
+<div class="row p-5">
+  <div class="col-sm-6 p-3">
+    <div class="row">
+      <div class="col-sm-7 mx-auto">
+        <fieldset class="bg-light"><legend><h3>Send message-</h3></legend>
+        <form method="post">
+          {% csrf_token %}
+          <h6>Name</h6><input type="text" name="name" placeholder="Name..." class="form-control" required/>
+          <h6>Email</h6><input type="email" name="email" placeholder="email" class="form-control" required/>
+          <h6>Mobile</h6><input type="number" name="mobile" placeholder="mobile" class="form-control" required/>
+          <h6>Message</h6><textarea  name="msg" class="form-control" placeholder="message"></textarea>
+          <input type="submit" value="Save" class="btn bg-mycolor text-light"/>
+        </form>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-3 bg-light mb-3 p-3">
+    <h4>Contact Info</h4><br/>
+    <div class="row fs-15">
+      <h5 class="txt-mycolor"><i class="fa-solid fa-location-dot"></i>&nbsp;Office Address</h5>
+      <p>plot no 13, sector-5, Kalyanpur, Lucknow, Uttarpradesh, 203049<br/></p>
+      <h5 class="txt-mycolor"><i class="fa-solid fa-phone"></i>&nbsp;Call Us</h5>
+      <p>+91 6392783965<br/>+91 7376488438</p>
+      <h5 class="txt-mycolor"><i class="fa-regular fa-envelope"></i>&nbsp;Mail Us</h5>
+      <p>abhisingh912at@gmail.com<br/>
+        abhithakur912at@gmail.com</p>
+    </div>
+</div>
+</div>
+{% endblock%}
